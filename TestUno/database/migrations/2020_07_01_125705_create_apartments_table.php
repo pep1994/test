@@ -18,7 +18,7 @@ class CreateApartmentsTable extends Migration
             $table->string('description');
             $table->integer('room_number');
             $table->integer('bath_number');
-            $table->float('area');
+            $table->integer('area');
             $table->string('address');
             $table->string('img');
             $table->boolean('wi_fi');
