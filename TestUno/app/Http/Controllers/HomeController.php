@@ -21,12 +21,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $apartments = Apartment::all();
-
-        dd($users);
-
-
-        return view('home', compact('users, apartments'));
+        return view('home');
     }
 }

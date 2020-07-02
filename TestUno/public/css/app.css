@@ -10928,3 +10928,9 @@ a.text-dark:focus {
   }
 }
 
+header {
+  background-color: green;
+  height: 250px;
+  width: 100%;
+}
+
