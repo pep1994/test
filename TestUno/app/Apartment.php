@@ -23,4 +23,8 @@ class Apartment extends Model
     public function reservations(){
       return $this -> belongsToMany(Reservation::class);
     }
+
+    public function optionals(){
+      return $this ->belongsToMany(Optional::class);
+    }
 }

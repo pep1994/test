@@ -26,12 +26,6 @@ class CreateApartmentsTable extends Migration
             $table->float('latitude');
             $table->float('longitude');
             $table->bigInteger('views')->default(0);
-            $table->boolean('wi_fi');
-            $table->boolean('box_auto');
-            $table->boolean('pool');
-            $table->boolean('security');
-            $table->boolean('sauna');
-            $table->boolean('sea_view');
 
             $table->bigInteger('user_id')-> unsigned() -> index();
 

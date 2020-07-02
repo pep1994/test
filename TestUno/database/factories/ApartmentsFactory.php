@@ -18,11 +18,4 @@ $factory->define(Apartment::class, function (Faker $faker) {
         'views' => $faker->numberBetween($min = 2, $max = 4632 ),
         'latitude' => $faker->latitude(),
         'longitude' => $faker->longitude(),
-        'wi_fi' => $faker->boolean($chanceOfGettingTrue = 90),
-        'box_auto' => $faker->boolean($chanceOfGettingTrue = 30),
-        'pool' => $faker->boolean($chanceOfGettingTrue = 25),
-        'security' => $faker->boolean($chanceOfGettingTrue = 50),
-        'sauna' => $faker->boolean($chanceOfGettingTrue = 10),
-        'sea_view' => $faker->boolean($chanceOfGettingTrue = 50),
-    ];
 });
