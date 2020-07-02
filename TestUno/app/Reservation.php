@@ -12,4 +12,8 @@ class Reservation extends Model
     return $this -> belongsToMany(Apartment::class);
   }
 
+  public function user() {
+    return $this -> belongsTo(User::class);
+  }
+
 }

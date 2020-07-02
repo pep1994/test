@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Apartment;
 use App\Reservation;
+use App\User;
 class ReservationsSeeder extends Seeder
 {
     /**
@@ -12,9 +13,13 @@ class ReservationsSeeder extends Seeder
      */
     public function run()
     {
-      factory(Reservation::Class, 30) -> create() -> each(function($reservation){
+      factory(Reservation::Class, 30) -> make() -> each(function($reservation){
         $apartment = Apartment::inRandomOrder() -> first();
+        $user = User::inRandomOrder() -> first();
         $reservation -> apartments() -> attach($apartment);
+        $reservation -> user() -> associate($user);
+
+        $reservation -> save();
       });
     }
 }

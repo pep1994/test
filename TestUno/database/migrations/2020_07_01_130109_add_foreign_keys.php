@@ -21,6 +21,14 @@ class AddForeignKeys extends Migration
 
       });
 
+      Schema::table('reservations', function (Blueprint $table) {
+          $table->foreign('user_id' , 'user_reservations')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+      });
+
 
 
       Schema::table('apartments', function (Blueprint $table) {
@@ -54,6 +62,11 @@ class AddForeignKeys extends Migration
       Schema::table('users', function (Blueprint $table) {
           $table-> dropForeign('user_apartments');
       });
+
+      Schema::table('reservations', function (Blueprint $table) {
+          $table-> dropForeign('user_reservations');
+      });
+
 
       Schema::table('apartment_reservation', function (Blueprint $table) {
 

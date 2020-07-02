@@ -10,9 +10,9 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name(),
-        'lastname' => $faker->lastName(),
-        'dateOfBirth' => $faker->date(),
-        'country' => $faker->country(),
+        // 'lastName' => $faker->lastName(),
+        // 'dateOfBirth' => $faker->date(),
+        // 'address' => $faker->address(),
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
         'password' => $faker->password(),

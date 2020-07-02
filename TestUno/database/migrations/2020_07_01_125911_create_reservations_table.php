@@ -18,6 +18,8 @@ class CreateReservationsTable extends Migration
             $table->date('start_reservation');
             $table->date('end_reservation');
             $table->integer('number_of_guests');
+
+            $table->bigInteger('user_id') -> unsigned() -> index();
             $table->timestamps();
         });
     }
