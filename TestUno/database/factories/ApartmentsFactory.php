@@ -17,5 +17,6 @@ $factory->define(Apartment::class, function (Faker $faker) {
         'img' => $faker->imageUrl($width = 200, $height = 150),
         'views' => $faker->numberBetween($min = 2, $max = 4632 ),
         'latitude' => $faker->latitude(),
-        'longitude' => $faker->longitude(),
-});
+        'longitude' => $faker->longitude()
+      ];
+    });

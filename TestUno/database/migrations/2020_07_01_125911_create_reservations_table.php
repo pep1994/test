@@ -15,12 +15,12 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            
+
             $table->date('start_reservation');
             $table->date('end_reservation');
             $table->integer('number_of_guests');
+            $table->string('total_price');
 
-            $table->bigInteger('user_id') -> unsigned() -> index();
             $table->timestamps();
         });
     }

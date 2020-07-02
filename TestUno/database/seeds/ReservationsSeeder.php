@@ -13,13 +13,16 @@ class ReservationsSeeder extends Seeder
      */
     public function run()
     {
-      factory(Reservation::Class, 30) -> make() -> each(function($reservation){
-        $apartment = Apartment::inRandomOrder() -> first();
-        $user = User::inRandomOrder() -> first();
-        $reservation -> apartments() -> attach($apartment);
-        $reservation -> user() -> associate($user);
+      $apartments = Apartment::all();
+      factory(Reservation::class, 35) -> create();
+      foreach ($apartments as $apartment) {
+        $reservation = Reservation::inRandomOrder() -> first();
+        $apartment -> reservations() -> attach($reservation);
 
-        $reservation -> save();
-      });
+      // factory(Reservation::class, 30) -> create() -> each(function($reservations){
+      //   $apartments = Apartment::inRandomOrder() -> take(rand(1,5)) -> get();
+      //   $reservations -> apartments() -> attach($apartments);
+      // });
+      }
     }
 }
