@@ -17,6 +17,7 @@ class CreateApartmentsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->integer('price');
             $table->integer('room_number');
             $table->integer('bath_number');
             $table->integer('area');
@@ -24,6 +25,7 @@ class CreateApartmentsTable extends Migration
             $table->string('img');
             $table->float('latitude');
             $table->float('longitude');
+            $table->bigInteger('views')->default(0);
             $table->boolean('wi_fi');
             $table->boolean('box_auto');
             $table->boolean('pool');

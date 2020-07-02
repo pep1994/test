@@ -16,6 +16,10 @@ class Apartment extends Model
       return $this -> hasMany(Message::class);
     }
 
+    public function sponsors(){
+      return $this -> hasMany(Sponsor::class);
+    }
+
     public function reservations(){
       return $this -> belongsToMany(Reservation::class);
     }
