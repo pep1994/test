@@ -19,7 +19,7 @@ class CreateSponsorsTable extends Migration
             $table->date('end_sponsor');
             $table->decimal('cost', 4 , 2);
             $table->bigInteger('apartment_id')->unsigned()->index();
-            $table->string('type');
+
             $table->timestamps();
         });
     }

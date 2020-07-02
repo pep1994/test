@@ -13,7 +13,7 @@ class SponsorsSeeder extends Seeder
      */
     public function run()
     {
-      factory(Sponsor::class, 5) -> make() -> each(function($sponsor){
+      factory(Sponsor::class, 6) -> make() -> each(function($sponsor){
         $apartment = Apartment::inRandomOrder()->first();
         $sponsor -> apartment() -> associate($apartment);
         $sponsor -> save();

@@ -3,19 +3,22 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+    <script src="https://kit.fontawesome.com/d99074f875.js" crossorigin="anonymous"></script>
+
     <script src="{{asset('js/app.js')}}" charset="utf-8"></script>
 
     <title></title>
   </head>
   <body>
-    <header>
-      @include('components.header')
-    </header>
+
+    @include('components.header')
+
 
     @yield('content')
-    <footer>
-      @include('components.footer')
-    </footer>
+
+
+    @include('components.footer')
 
   </body>
 </html>
