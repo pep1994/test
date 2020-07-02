@@ -1,7 +1,10 @@
 <header>
   <div class="header-sx">
     <div class="header-logo">
-      <i class="fas fa-hotel"></i><h2>BoolBnB</h2>
+      <i class="fas fa-hotel"></i>
+      <h2>
+        <a href="{{ route('home') }}"> BoolBnb</a>
+      </h2>
     </div>
   </div>
   <div class="header-dx">
@@ -38,4 +41,5 @@
         @endguest
     </ul>
   </div>
+
 </header>
