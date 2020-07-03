@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
           ApartmentsSeeder::class,
           ReservationsSeeder::class,
           MessagesSeeder::class,
-          OptionalsSeeder::class,
+          OptionalsSeeder::class
       ]);
     }
 }
