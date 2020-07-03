@@ -18,11 +18,6 @@ class ReservationsSeeder extends Seeder
       foreach ($apartments as $apartment) {
         $reservation = Reservation::inRandomOrder() -> first();
         $apartment -> reservations() -> attach($reservation);
-
-      // factory(Reservation::class, 30) -> create() -> each(function($reservations){
-      //   $apartments = Apartment::inRandomOrder() -> take(rand(1,5)) -> get();
-      //   $reservations -> apartments() -> attach($apartments);
-      // });
       }
     }
 }
